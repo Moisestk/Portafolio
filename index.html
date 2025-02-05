@@ -9,6 +9,8 @@
     <link rel="icon" href="./img/iconn.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -143,7 +145,7 @@
                     <div class="card" style=" background:#e1d95f; border-radius:20px">
                         <div class="card-body">
                             <h5 class="card-title">Page</h5>
-                            <p>Detalles</p>
+                            <p class="detalles" data-bs-toggle="modal" data-bs-target="#infoModal"  onclick="setProjectInfo('Page', 'Un sitio web informativo sobre un bar de la ciudad.', 'img/garua.png')">Detalles</p>
                             <a href="https://moisestk.github.io/ElGarua/" class="btn btn-primary">Visitar <svg
                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
@@ -157,7 +159,7 @@
                     <div class="card" style="background:#e1d95f;border-radius:20px">
                         <div class="card-body">
                             <h5 class="card-title">Sistema de Registro</h5>
-                            <p>Detalles</p>
+                            <p class="detalles" data-bs-toggle="modal" data-bs-target="#infoModal"onclick="setProjectInfo('Sistema de Registro', 'Un sistema que permite a los usuarios registrarse y gestionar sus datos.', 'img/sistema.png')">Detalles</p>
                             <a href="#" class="btn btn-primary">Visitar <svg xmlns="http://www.w3.org/2000/svg"
                                     width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill"
                                     viewBox="0 0 16 16">
@@ -171,7 +173,7 @@
                     <div class="card" style="background:#e1d95f;border-radius:20px">
                         <div class="card-body">
                             <h5 class="card-title">Galeria</h5>
-                            <p>Detalles</p>
+                            <p class="detalles"  data-bs-toggle="modal" data-bs-target="#infoModal" onclick="setProjectInfo('Galería', 'Una galería de imágenes creada con React.', 'img/galeria.png')">Detalles</p>
                             <a href="https://moisestk.github.io/galeria-react/" class="btn btn-primary">Visitar <svg xmlns="http://www.w3.org/2000/svg"
                                     width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill"
                                     viewBox="0 0 16 16">
@@ -185,7 +187,7 @@
                     <div class="card" style="background:#e1d95f; border-radius:20px">
                         <div class="card-body">
                             <h5 class="card-title">Tienda</h5>
-                            <p>Detalles</p>
+                            <p class="detalles"  data-bs-toggle="modal" data-bs-target="#infoModal" onclick="setProjectInfo('Tienda', 'Un sitio de comercio electrónico en desarrollo.', 'img/tienda.png')">Detalles</p>
                             <a href="#" class="btn btn-primary">Visitar <svg xmlns="http://www.w3.org/2000/svg"
                                     width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill"
                                     viewBox="0 0 16 16">
@@ -199,6 +201,24 @@
         </div>
     </div>
 
+    <!-- MODAL PARA INFORMACIÓN DEL PROYECTO -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="infoModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <img id="infoModalImage" src="" alt="Vista previa del proyecto">
+                <p id="infoModalDescription"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Contenedor 5 -->
 
@@ -262,7 +282,14 @@
 
 
 
-
+          <script>
+            function setProjectInfo(title, description, imageUrl) {
+                document.getElementById('infoModalLabel').innerText = title;
+                document.getElementById('infoModalDescription').innerText = description;
+                document.getElementById('infoModalImage').src = imageUrl;
+            }
+        </script>
+        
 
 
 
