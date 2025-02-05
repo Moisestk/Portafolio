@@ -1,4 +1,4 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -12,25 +12,26 @@
     z-index: -1;
 }
 
-.custom-1{
+.custom-1 {
     color: #5ce1e6;
     width: 100%;
     height: 100vh;
 }
 
-.custom-1 h1{
+.custom-1 h1 {
     color: #ecf0f1;
     font-size: 50px;
     font-weight: 600;
 }
-.custom-1 p{
+
+.custom-1 p {
     color: #ecf0f1;
     font-weight: 600;
     font-size: 15px;
 }
 
-.bi:hover{
-    color:#e1d95f;
+.bi:hover {
+    color: #e1d95f;
 }
 
 .profile-img {
@@ -40,69 +41,131 @@
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.custom-2{
+
+.custom-2 {
     height: 85vh;
     padding-top: 60px;
     color: #ecf0f1;
 }
-.custom-2 p{
+
+.custom-2 p {
     font-size: 20px;
     margin-right: 100px;
 }
 
-.custom-2 img{
+.custom-2 img {
     border-radius: 20px;
 }
-.custom-2 h1{
+
+.custom-2 h1 {
     padding-bottom: 12px;
     font-weight: 900;
 }
-.custom-3{
-    background:#e1d95f; 
-    height:80vh;
+
+.custom-3 {
+    background: #e1d95f;
+    height: 80vh;
     text-align: center;
 }
-.custom-3 h1{
+
+.custom-3 h1 {
     font-weight: 900;
 }
-.custom-3 h4{
+
+.custom-3 h4 {
     font-weight: 600;
 }
-.custom-cont h1{
+
+.custom-cont h1 {
     font-weight: 900;
 }
-.custom-3 img{
+
+.custom-3 img {
     width: 100px;
     height: 100px;
     padding: 10px;
 }
-.custom-4{
+
+.custom-3 img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    opacity: 0.8;
+}
+
+
+.custom-4 {
     height: 90vh;
-    background-image: url("/img/Leonel\ Guerrero\ \(2\).png");
+    background-image: url("2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.custom-4 h1{
+.custom-4 h1 {
     color: #ecf0f1;
     font-weight: 900;
     padding: 20px;
 }
-.custom-4 a{
+
+.custom-4 a {
     border-radius: 60px;
     background: #1f1c20;
     border: #1f1c20;
 }
-.custom-4 a:hover{
+
+.custom-4 a:hover {
     background: gray;
 }
-.custom-4 h5{
+
+.custom-4 h5 {
     font-weight: 700;
 }
 
+.detalles {
+    cursor: pointer;
+    color: #000;
+    font-size: 20px;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
 
-.custom-5{
+.detalles:hover {
+    color: #555;
+}
+
+.info-icon:hover {
+    color: #555;
+}
+
+/* Estilos del modal con animación */
+.modal-content {
+    text-align: center;
+    border-radius: 15px;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-header {
+    background: #e1d95f;
+    color: black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.custom-5 {
     background-image: url(/img/Leonel\ Guerrero\ \(4\).png);
     background-size: cover;
     background-position: center;
@@ -110,14 +173,16 @@
     height: 100vh;
 }
 
-.custom-5 h1{
+.custom-5 h1 {
     font-weight: 900;
 }
-.custom-5 h4{
+
+.custom-5 h4 {
     font-weight: 700;
     padding-bottom: 20px;
 }
-.contact-image{
+
+.contact-image {
     width: 300px;
     height: 300px;
     object-fit: cover;
@@ -125,72 +190,97 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 800px){
-    .btn{
+@media (max-width: 800px) {
+    .btn {
         margin: 0;
     }
-    .navbar{
-        padding:0;
+
+    .navbar {
+        padding: 0;
     }
-    .image{
+
+    .image {
         width: 200px;
         height: 50px;
     }
-    .custom-1 h1{
+
+    .custom-1 h1 {
         font-size: 30px;
     }
-    .custom-1 p{
+
+    .custom-1 p {
         font-size: 15px;
     }
-    .custom-2{
+
+    .custom-2 {
         height: 90vh;
         text-align: center;
     }
-    .custom-2 p{
+
+    .custom-2 p {
         margin-right: 0;
         padding: 20px;
         font-size: 15px;
     }
-    .custom-2 h1{
+
+    .custom-2 h1 {
         padding-bottom: 0px;
     }
-    .custom-2 img{
+
+    .custom-2 img {
         height: 250px;
         width: 280px;
         border-radius: 20px;
     }
-    .custom-3 img{
+
+    .custom-3 img {
         height: 80px;
         width: 80px;
     }
-    .custom-3 h1{
+
+    .custom-3 h1 {
         font-weight: 900;
         font-size: 30px;
     }
-    .custom-4{
-        height: 150vh; 
+
+    .custom-4 {
+        height: 150vh;
     }
-    .custom-4 h1{
+
+    .custom-4 h1 {
         font-weight: 900;
         font-size: 30px;
     }
+
+    .modal-content {
+        max-width: 95%;
+    }
+
+    .modal-body img {
+        max-width: 300px;
+    }
+
     .card {
         margin: 20px;
     }
-    .custom-5{
+
+    .custom-5 {
         text-align: center;
         background: #ecf0f1;
         height: 65vh;
     }
-    .custom-5 h1{
+
+    .custom-5 h1 {
         font-size: 30px;
         font-weight: 900;
     }
-    .custom-5 h4{
+
+    .custom-5 h4 {
         font-size: 15px;
         padding: 15px;
     }
-    .contact-image{
+
+    .contact-image {
         height: 150px;
         width: 150px;
     }
